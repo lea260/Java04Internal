@@ -14,6 +14,7 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.CardLayout;
+import javax.swing.JMenuItem;
 
 public class Principal extends JFrame {
 
@@ -42,15 +43,6 @@ public class Principal extends JFrame {
 		setTitle("Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1299, 713);
-		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
-		
-		JMenu mnNewMenu = new JMenu("New menu");
-		menuBar.add(mnNewMenu);
-		
-		JMenu menu = new JMenu("New menu");
-		mnNewMenu.add(menu);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -77,5 +69,22 @@ public class Principal extends JFrame {
 		btnAgregar.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnAgregar.setBounds(64, 36, 117, 38);
 		contentPane.add(btnAgregar);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 1285, 22);
+		contentPane.add(menuBar);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Ventana");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Agregar ventanAgregar = new Agregar();
+				desktopPane.add(ventanAgregar);
+				ventanAgregar.setVisible(true);
+			}
+		});
+		menuBar.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Cantidad");
+		menuBar.add(mntmNewMenuItem_1);
 	}
 }
