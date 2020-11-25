@@ -19,11 +19,12 @@ public class Agregar extends JInternalFrame {
 	public Agregar() {
 		setClosable(true);
 		setTitle("Agregar");
-		setBounds(100, 100, 549, 334);
+		setBounds(100, 100, 992, 497);
 		getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(33, 41, 449, 220);
+		panel.setBounds
+		(33, 41, 890, 390);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 

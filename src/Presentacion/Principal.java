@@ -41,7 +41,7 @@ public class Principal extends JFrame {
 	public Principal() {
 		setTitle("Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 828, 432);
+		setBounds(100, 100, 1299, 713);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -57,7 +57,7 @@ public class Principal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JDesktopPane desktopPane = new JDesktopPane();
-		desktopPane.setBounds(0, 100, 804, 285);
+		desktopPane.setBounds(0, 100, 1275, 544);
 		contentPane.add(desktopPane);
 		desktopPane.setLayout(new CardLayout(0, 0));
 		
